@@ -1,0 +1,23 @@
+{
+  "name": "Builder",
+  "version": "1.0.0",
+  "description": "Builder",
+  "main": "builder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cpy": "^7.0.1",
+    "del": "^3.0.0",
+    "glob-promise": "^3.4.0",
+    "gltf-import-export": "^1.0.12",
+    "imagemin": "^6.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "rollup": "^0.66.4",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-babel-minify": "^6.1.0",
+    "rollup-plugin-re": "^1.0.7"
+  }
+}

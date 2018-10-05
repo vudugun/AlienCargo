@@ -1,0 +1,4 @@
+/assets/meshes/*.blend1
+/build/node_modules
+/build/release/code
+/build/release/assets
