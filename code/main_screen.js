@@ -114,7 +114,7 @@ export class MainScreen extends Screen {
   get assets() {
     return this._assets;
   }
-  
+
   run(fadeInDuration_ = 200) {
     this._ui.isVisible = true;
     this._ui.isEnabled = false;
@@ -151,7 +151,7 @@ export class MainScreen extends Screen {
     this._warehouseAspect = new WarehouseAspect(this);
     this._warehouseAspect.position.set(0, 2.8, 0);
   }
-  
+
   _createLights() {
     // light1
     const pos1 = new BABYLON.Vector3(0, 12, 0);
@@ -160,13 +160,13 @@ export class MainScreen extends Screen {
     this._light1.shadowMinZ = 6;
     this._light1.shadowMaxZ = 12;
   }
-  
+
   _createCamera() {
     const pos1 = new BABYLON.Vector3(0, 3, 0);
     this._camera1 = new BABYLON.ArcRotateCamera("camera1", -Math.PI / 2,
       Math.PI / 9, 10, pos1, this._scene);
   }
-  
+
   _createSounds() {
     { // music
       this._music = this._assets.getSound("music");
@@ -200,7 +200,7 @@ export class MainScreen extends Screen {
   _stopAmbientSound() {
     this._ambientSound.stop();
   }
-  
+
   _createUI() {
     this._ui.create();
     this._ui.maxLevelNo = this._maps.getCount(this._levelPack);

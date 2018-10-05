@@ -58,7 +58,7 @@ export class LevelScreen extends Screen {
 
   _initCallbacks() {
     this._engine_onRenderLoopCallback = this._engine_onRenderLoop.bind(this);
-    this._settings_onOptionChangedCallback = this._settings_onOptionChanged.bind(this); 
+    this._settings_onOptionChangedCallback = this._settings_onOptionChanged.bind(this);
     this._forklift_onIdleCallback = this._forklift_onIdle.bind(this);
     this._ui_onAbortCallback = this._ui_onAbort.bind(this);
     this._ui_onRestartCallback = this._ui_onRestart.bind(this);
@@ -146,7 +146,7 @@ export class LevelScreen extends Screen {
       });
     });
   }
-  
+
   abort(onFinished_ = () => {}) {
     this._untrackKeyboard();
     this._ui.isEnabled = false;
@@ -184,7 +184,7 @@ export class LevelScreen extends Screen {
     this._ui.isEnabled = false;
     this._fadeOut(200, () => {
       this._disposeFigures();
-      this._level.reset();    
+      this._level.reset();
       this._createFigures();
       this._fadeIn(200, () => {
         this._ui.isEnabled = true;
