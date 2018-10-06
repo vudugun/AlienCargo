@@ -15,7 +15,7 @@ export class Keyboard {
   untrack() {
     window.removeEventListener("keyup", this._keyUpListener);
     window.removeEventListener("keydown", this._keyDownListener);
-    this._actions.clear();
+    this._actions = null;
     this._keysDown.clear();
   }
 
