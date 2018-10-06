@@ -10,11 +10,10 @@ export class Actor extends Figure  {
     this._carries = new Map();
     this._initCallbacks();
     this._initEvents();
-    this._screen.scene.registerBeforeRender(this._scene_onRegisterBeforeRenderCallback);
   }
 
   dispose() {
-    this._screen.scene.unregisterBeforeRender(this._scene_onRegisterBeforeRenderCallback);
+    this._disposeEvents();
     super.dispose();
   }
 
@@ -28,7 +27,7 @@ export class Actor extends Figure  {
       this.onIdle.notify();
   }
 
-  moveBy(mesh_, step_, frames_, {
+  _moveBy(mesh_, step_, frames_, {
         fps: fps_ = 30,
         group: group_ = "default",
         onFinished: onFinished_ = () => {}
@@ -43,7 +42,7 @@ export class Actor extends Figure  {
     const carry = this._carries.get(group_) || 0;
     const anim = new Animation(mesh_, "position",
       BABYLON.Vector3.Lerp, keys, fps_, carry);
-    anim.onFinished.add((carry_) => {
+    anim.onFinished.add(carry_ => {
       this._carries.set(group_, carry_);
       const index = this._animations.indexOf(anim);
       this._animations.splice(index, 1);
@@ -54,7 +53,7 @@ export class Actor extends Figure  {
     this._animations.push(anim);
   }
 
-  rotateBy(mesh_, step_, frames_, {
+  _rotateBy(mesh_, step_, frames_, {
         fps: fps_ = 30,
         group: group_ = "default",
         onFinished: onFinished_ = () => {}
@@ -69,7 +68,7 @@ export class Actor extends Figure  {
     const carry = this._carries.get(group_) || 0;
     const anim = new Animation(mesh_, "rotationQuaternion",
       BABYLON.Quaternion.Slerp, keys, fps_, carry);
-    anim.onFinished.add((carry_) => {
+    anim.onFinished.add(carry_ => {
       this._carries.set(group_, carry_);
       const index = this._animations.indexOf(anim);
       this._animations.splice(index, 1);
@@ -81,14 +80,19 @@ export class Actor extends Figure  {
   }
 
   _initCallbacks() {
-    this._scene_onRegisterBeforeRenderCallback = this._scene_onRegisterBeforeRender.bind(this);
+    this._scene_onBeforeRenderCallback = this._scene_onBeforeRender.bind(this);
   }
 
   _initEvents() {
     this.onIdle = new Observable();
+    this._screen.scene.registerBeforeRender(this._scene_onBeforeRenderCallback);
   }
 
-  _scene_onRegisterBeforeRender() {
+  _disposeEvents() {
+    this._screen.scene.unregisterBeforeRender(this._scene_onBeforeRenderCallback);
+  }
+
+  _scene_onBeforeRender() {
     this._carries.clear();
     const timeDelta_ = this._screen.scene.getEngine().getDeltaTime();
     for (const anim of [...this._animations]) // loop on a copy
