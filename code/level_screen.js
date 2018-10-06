@@ -364,7 +364,7 @@ export class LevelScreen extends Screen {
       [ 38, () => { // arrow up
           if (this._forklift.idle)
             this._level.move("n");
-        }],
+        } ],
       [ 39, () => { // arrow right
           if (this._forklift.idle)
             this._level.move("e");
@@ -391,13 +391,13 @@ export class LevelScreen extends Screen {
         } ],
       [ 27, () => { // escape
           this.onAbort.notify();
-          } ],
+        } ],
       [ 82, () => { // r
           this.onRestart.notify();
         } ],
       [ 80, () => { // p
           this.onPlayback.notify();
-        } ],
+        } ]
     ]));
   }
 
@@ -405,10 +405,10 @@ export class LevelScreen extends Screen {
     this._keyboard.track(new Map([
       [ 27, () => { // escape
           this.onAbort.notify();
-          } ],
+        } ],
       [ 82, () => { // r
           this.onRestart.notify();
-        } ],
+        } ]
     ]));
   }
 
