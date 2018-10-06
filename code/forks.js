@@ -63,7 +63,6 @@ export class Forks extends Entity {
 
   _computeLocation(height_) {
     const loc = this.parent.location;
-    console.assert(loc);
     const ori = this.parent.orientation;
     return loc.dd(ori).dh(height_);
   }

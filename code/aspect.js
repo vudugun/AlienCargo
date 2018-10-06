@@ -5,7 +5,6 @@ export class Aspect {
   }
 
   dispose() {
-    console.assert(this._mesh);
     this._mesh.dispose();
   }
 
