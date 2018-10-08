@@ -7,7 +7,6 @@ export class Forks extends Entity {
     super(grid_);
     this._height = 0;
     this.payload = null;
-    this._movesCount = 0;
     this._initEvents();
   }
 
@@ -23,12 +22,7 @@ export class Forks extends Entity {
     const from = this._height;
     this._height = height_;
     this._updateLocation();
-    ++this._movesCount;
     this.onMove.notify(from, this._height);
-  }
-
-  get movesCount() {
-    return this._movesCount;
   }
 
   get cratesCount() {

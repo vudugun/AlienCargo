@@ -196,12 +196,14 @@ export class LevelScreen extends Screen {
   }
 
   handleLevelSolved() {
+    if (window.DEBUG)
+      console.log(this._level.moves.join(" "));
     this._untrackKeyboard();
     this._ui.isEnabled = false;
     this._ui.fadeOut(200, () => {
       this._ui.isVisible = false;
       this._uiLevelSolved.level = this._level.number;
-      this._uiLevelSolved.moves = this._level.movesCount;
+      this._uiLevelSolved.moves = this._level.moves.length;
       this._uiLevelSolved.time = (Date.now() - this._startTime) / 1000;
       this._uiLevelSolved.isVisible = true;
       this._levelSolvedSound.play();

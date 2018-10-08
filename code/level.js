@@ -28,8 +28,8 @@ export class Level {
     return this._grid;
   }
 
-  get movesCount() {
-    return this._forklift.movesCount;
+  get moves() {
+    return this._forklift.moves;
   }
 
   get cratesCount() {

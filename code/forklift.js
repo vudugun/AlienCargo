@@ -8,7 +8,7 @@ export class Forklift extends Entity {
   constructor(grid_, orientation_) {
     super(grid_);
     this._orientation = orientation_;
-    this._movesCount = 0;
+    this._moves = [];
     this._createForks();
     this._initCallbacks();
     this._initEvents();
@@ -79,8 +79,8 @@ export class Forklift extends Entity {
     }
   }
 
-  get movesCount() {
-    return this._movesCount + this._forks.movesCount;
+  get moves() {
+    return this._moves;
   }
 
   get cratesCount() {
@@ -120,7 +120,7 @@ export class Forklift extends Entity {
       payloadIn.parent = this._forks;
     }
     this.location = this.location.dd(direction_);
-    ++this._movesCount;
+    this._moves.push("F");
     this.onMoveForward.notify(payloadIn);
   }
 
@@ -160,7 +160,7 @@ export class Forklift extends Entity {
       }
     }
     this.location = this.location.dd(direction_);
-    ++this._movesCount;
+    this._moves.push("B");
     this.onMoveBackward.notify(payloadOut);
   }
 
@@ -176,7 +176,7 @@ export class Forklift extends Entity {
     if (!this._canRotate(direction_))
       return;
     this.orientation = direction_;
-    ++this._movesCount;
+    this._moves.push("CW");
     this.onRotateCW.notify();
   }
 
@@ -184,7 +184,7 @@ export class Forklift extends Entity {
     if (!this._canRotate(direction_))
       return;
     this.orientation = direction_;
-    ++this._movesCount;
+    this._moves.push("CCW");
     this.onRotateCCW.notify();
   }
 
@@ -209,6 +209,7 @@ export class Forklift extends Entity {
   }
 
   _forks_onMove(from_, to_) {
+    this._moves.push(String(to_ + 1));
     this.onForksMove.notify(from_, to_);
   }
 }
