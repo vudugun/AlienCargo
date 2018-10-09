@@ -196,8 +196,6 @@ export class LevelScreen extends Screen {
   }
 
   handleLevelSolved() {
-    if (window.DEBUG)
-      console.log(this._level.moves.join(" "));
     this._untrackKeyboard();
     this._ui.isEnabled = false;
     this._ui.fadeOut(200, () => {
@@ -465,7 +463,8 @@ export class LevelScreen extends Screen {
 
   _forklift_onIdle() {
     if (this._level.isSolved()) {
-      console.assert(!this._isPlaybackInProgress());
+      if (window.DEBUG)
+        console.log(this._level.moves.join(" "));
       this.onLevelSolved.notify();
     } else if (this._isPlaybackInProgress()) {
       this._advancePlayback();
