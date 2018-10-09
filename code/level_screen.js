@@ -398,7 +398,8 @@ export class LevelScreen extends Screen {
           this.onRestart.notify();
         } ],
       [ 80, () => { // p
-          this.onPlayback.notify();
+          if (this._level.solution.moves.length > 0)
+            this.onPlayback.notify();
         } ]
     ]));
   }
