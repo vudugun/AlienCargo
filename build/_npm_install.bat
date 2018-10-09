@@ -9,4 +9,5 @@ call npm i -D cpy
 call npm i -D imagemin
 call npm i -D imagemin-pngquant
 call npm i -D gltf-import-export
+call npm i -D replace-in-file
 pause

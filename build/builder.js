@@ -8,6 +8,7 @@ const copy = require("cpy");
 const imagemin = require("imagemin");
 const imageminPngquant = require("imagemin-pngquant");
 const gltfImportExport = require("gltf-import-export");
+const replaceInFile = require('replace-in-file');
 
 const clean = async function() {
   await del([
@@ -57,7 +58,7 @@ const buildAssets = async function() {
     copyConvertMeshes("../assets/meshes/gltf", "release/assets/meshes"),
     copy("../assets/shaders/*.fx", "release/assets/shaders"),
     copy("../assets/sounds/*.mp3", "release/assets/sounds"),
-    copy("../assets/texts/*.json", "release/assets/texts"),
+    copy("../assets/texts/*.json", "release/assets/texts")
   ]);
 }
 
@@ -76,6 +77,7 @@ const copyCompressPNG = async function(from, to) {
 }
 
 const copyConvertMeshes = async function(from, to) {
+  // copy meshes files
   await Promise.all([
     copyCompressPNG(`${from}/*.png`, to),
     copy(`${from}/*.{gltf,bin}`, to),
@@ -83,8 +85,16 @@ const copyConvertMeshes = async function(from, to) {
       rename: basename => basename.replace(".gltf", ".glb")
     })
   ]);
+  // convert .gltf to .glb
   for (const file of await glob(`${to}/*.gltf`))
     gltfImportExport.ConvertGltfToGLB(file, file.replace(".gltf", ".glb"));
+  // update manifests version
+  await replaceInFile({
+    files: `${to}/*.glb.manifest`,
+    from: /"version" : 1/,
+    to: `"version" : ${Date.now()}`
+  });
+  // clean up
   await del([ `${to}/*.{gltf,gltf.manifest,bin,png}` ]);
 }
 
