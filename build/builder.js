@@ -91,8 +91,16 @@ const copyConvertMeshes = async function(from, to) {
   // update manifests version
   await replaceInFile({
     files: `${to}/*.glb.manifest`,
-    from: /"version" : 1/,
-    to: `"version" : ${Date.now()}`
+    from: [
+      /"version" : 1/,
+      /"enableSceneOffline" : false/,
+      /"enableTextureOffline" : false/
+    ],
+    to: [
+      `"version" : ${Date.now()}`,
+      '"enableSceneOffline" : true',
+      '"enableTextureOffline" : true'
+    ]
   });
   // clean up
   await del([ `${to}/*.{gltf,gltf.manifest,bin,png}` ]);
