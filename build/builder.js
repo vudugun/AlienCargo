@@ -88,7 +88,7 @@ const copyConvertMeshes = async function(from, to) {
   // convert .gltf to .glb
   for (const file of await glob(`${to}/*.gltf`))
     gltfImportExport.ConvertGltfToGLB(file, file.replace(".gltf", ".glb"));
-  // update manifests version
+  // update manifests
   await replaceInFile({
     files: `${to}/*.glb.manifest`,
     from: [
