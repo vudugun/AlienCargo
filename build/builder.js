@@ -103,7 +103,7 @@ const copyConvertMeshes = async function(from, to) {
     ]
   });
   // clean up
-  await del([ `${to}/*.{gltf,gltf.manifest,bin,png}` ]);
+  await del([ `${to}/*.{gltf,bin,png}` ]);
 }
 
 const main = async function() {
