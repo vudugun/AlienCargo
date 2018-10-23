@@ -18,10 +18,9 @@ export class SpaceAspect extends Aspect {
   }
   
   _createSpaceAnimation() {
-    const axis = BABYLON.Vector3.Right();
-    const angle = Math.PI * 2;
-    const from = BABYLON.Vector3.Zero();
-    const to = axis.multiplyByFloats(angle, angle, angle);
+    const y = -(Math.PI / 2) + Math.random() * Math.PI;
+    const from = new BABYLON.Vector3(0, y, 0);
+    const to = new BABYLON.Vector3(Math.PI * 2, y, 0);
     const keys = [];
     keys.push({ frame: 0, value: from });
     keys.push({ frame: 800, value: to });
