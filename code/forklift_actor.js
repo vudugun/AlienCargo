@@ -164,8 +164,7 @@ export class ForkliftActor extends Actor {
 
   _entity_onForksMove(from_, to_) {
     const delta = to_ - from_;
-    const axis = BABYLON.Vector3.Up();
-    const step = axis.multiplyByFloats(delta, delta, delta);
+    const step = new BABYLON.Vector3(0, delta, 0);
     const frames = 7 - $settings.getOption("forks_speed");
     this._moveForks(step, frames);
   }

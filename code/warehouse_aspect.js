@@ -52,10 +52,8 @@ export class WarehouseAspect extends Aspect {
   }
 
   _createFanAnimation() {
-    const axis = BABYLON.Vector3.Up();
-    const angle = -Math.PI * 2;
     const from = BABYLON.Vector3.Zero();
-    const to = axis.multiplyByFloats(angle, angle, angle);
+    const to = new BABYLON.Vector3(0, -Math.PI * 2, 0);
     const keys = [];
     keys.push({ frame: 0, value: from });
     keys.push({ frame: 6, value: to });
