@@ -231,10 +231,10 @@ export class MainScreen extends Screen {
     const levelCount = this._maps.getCount(this._levelPack);
     if (this._nextLevelNo === levelCount)
       return false;
-    this._nextLevelNo = this._nextLevelNo + 1;
-    this._ui.nextLevelNo = this._nextLevelNo;
+    ++this._nextLevelNo;
     $settings.setBookmark(this._levelPack, Math.max(
       $settings.getBookmark(this._levelPack), this._nextLevelNo));
+    this._ui.nextLevelNo = this._nextLevelNo;
     return true;
   }
 
