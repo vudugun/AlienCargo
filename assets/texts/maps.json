@@ -869,47 +869,6 @@
       {
          "number":23,
          "solution":{
-            "moves":"F 3 CW B CW CW 2 F CW 1 B 2 F CCW B 1 F 2 CW B 3 F CCW B CCW CCW B B CCW 2 F 3 B CW F F F CCW 1 B 3 F CW B B B CCW 1 F 3 B CW F F F CCW B CCW F CW CW 1 B CCW 3 F CCW B CCW CCW B B CCW F CW CW B CCW 2 F 3 B CW F 1 B 3 CCW 1 F 3 F B B CW 1 F 3 CCW CCW B CW F F CW CW F CW B CW 1 F CCW CCW B CW F 2 B CCW F B CW F 3 F CW CW F CW F 1 B CCW B 3 CCW CCW B 2 F 3 B B CCW F B CW F 1 F 3 CW CW F CW F 2 B CCW B B 3 CCW B 2 F CW F F CW 3 F B CCW B B CCW B 1 F CW F 3 CCW CCW B 1 B 3 F CW B 2 F CCW B 3 F CW B 1 F 3 CCW B",
-            "count":206
-         },
-         "diagram":[
-            [
-               "#######",
-               "#.....#",
-               "#.x#x.#",
-               "#.x...#",
-               "##x..##",
-               " #####"
-            ],
-            [
-               "#######",
-               "#o ooo#",
-               "#  #  #",
-               "#o   o#",
-               "##  ^##",
-               " #####"
-            ],
-            [
-               "#######",
-               "#o ooo#",
-               "#  #  #",
-               "#o   o#",
-               "##   ##",
-               " #####"
-            ],
-            [
-               "#######",
-               "#     #",
-               "#  #  #",
-               "#     #",
-               "##   ##",
-               " #####"
-            ]
-         ]
-      },
-      {
-         "number":24,
-         "solution":{
             "moves":"2 F 3 B CW 1 B 2 F CCW 1 F F B 3 F CCW F CW CW 2 F 3 B CCW CCW 1 B 3 F CW CW 1 F 3 B CCW CCW B 1 B CCW F F B B CW F 2 B CCW F F B B CW F 1 F 3 B B CCW F F B B CW F CW B 1 F CCW B 2 F CW B CW CW B B CW F 3 B CCW F F CCW CCW B CW 1 B 2 F CCW F CW CW B B CW 1 F 2 CCW CCW 1 B 2 CW F 3 B CCW F 2 B CW 1 F F B B 2 CCW F 3 B CW F F 2 B B CCW 1 F 2 CW CW B CCW F F CCW CCW F CCW B 3 F CW B CW CW 1 F 3 B CCW CCW F CCW B CCW 1 F CW CW B 3 F CCW CCW F CW CW F 2 B CCW F F 3 B B CW F B CCW F 1 F 2 B 1 B 3 CCW B 2 F CW F B CCW B 1 F CW 3 F B",
             "count":217
          },
@@ -949,7 +908,7 @@
          ]
       },
       {
-         "number":25,
+         "number":24,
          "solution":{
             "moves":"2 F 3 B CCW F 1 B CW F 2 B CCW F B 3 F CW F CW CW CW B CW F F CCW 2 F 3 B CCW F 1 B B CW 3 F CCW F CCW CCW CCW B CW 1 B 3 F CCW F CW CW CW B 2 F CCW CCW 3 CCW 2 B CCW 1 F 2 B CW CW B B CCW 3 F CCW CCW CCW B CCW B CW F CCW 2 F 3 B CW F F B B CCW 1 F 2 B CCW B 1 B 3 F CW CW F CCW CCW F 2 B CW 3 F CW CW CW B 1 F F F B 3 F CCW B 2 F CW B B CCW 3 CCW CCW B CW B 2 F CCW CCW F B CW CW B 1 F CCW 3 F CW B B CW CW B B B CW B 2 F 3 CCW F F 1 B B 3 CW B 1 F 3 CCW F CCW CCW 1 B 3 F CCW B 2 F CW B 3 F CCW B 1 F 3 CW B CW CW B 1 F 3 CCW CCW 1 B 3 CW B 2 F CCW F B CW B 1 F CCW 3 F B",
             "count":229
@@ -986,52 +945,7 @@
          ]
       },
       {
-         "number":26,
-         "solution":{
-            "moves":"F 3 F B B CW 2 F 3 B CCW 1 F B CW F 2 B CCW F B CW F 3 F F CCW 1 F F F B 2 F CCW B 1 F 2 CW CW 1 B 2 F CCW CCW F CW CW F B CCW CCW B 1 F 2 B CW 3 B B 1 B 3 CW B B B CCW 2 F 3 B CW F F F CCW F 2 B 3 CW B B B CCW 1 F 2 CW CW 1 B 3 F CCW CCW F CW CW F 2 B CCW 3 CCW B 2 F CW CW 3 F B CCW CCW B 1 F 2 CW CW B CCW F F CCW CCW F 1 B CW 2 CW F CCW CCW F F B 3 F CCW B CCW 1 F F B 2 F CW F 3 B CCW 2 B CW CW B CCW 1 F 3 B CCW B B CW 1 F F F B B 3 CW B CW CW 1 F 2 B CCW CCW B CW 1 B 2 F CCW F F CCW F F B B CW B 1 F CCW F 3 F B B CW B B CW B B B CW B 2 F CCW F F F B B B CW B 1 F CCW F F 3 F B",
-            "count":242
-         },
-         "diagram":[
-            [
-               "######",
-               "#x...##",
-               "#x....#",
-               "#.##..#",
-               "#....x#",
-               "#..#.x#",
-               "#######"
-            ],
-            [
-               "######",
-               "#> oo##",
-               "#  oo #",
-               "#o##o #",
-               "#  o  #",
-               "#o #  #",
-               "#######"
-            ],
-            [
-               "######",
-               "#   o##",
-               "#   o #",
-               "#o##  #",
-               "#     #",
-               "#o #  #",
-               "#######"
-            ],
-            [
-               "######",
-               "#    ##",
-               "#     #",
-               "# ##  #",
-               "#     #",
-               "#  #  #",
-               "#######"
-            ]
-         ]
-      },
-      {
-         "number":27,
+         "number":25,
          "solution":{
             "moves":"CW F 2 F 3 B B CCW F B CW F 1 F 3 F CW CW F 1 F B 2 F CW F 3 B CCW 2 B 3 B CCW CCW B 2 F 3 CW CW F 1 B 3 CCW CCW B 1 F 3 CW CW 1 B 3 CW B 2 F CCW F B CW B 1 F F CCW CCW B CW F F 2 B B CCW F B CW F F 3 F CCW F 2 B 3 CW B B B CCW 2 F 3 B CW F 1 B CCW F 2 B CW F B CCW F F 3 CW 2 F 3 B CW 1 F B CCW F 2 B CW F B CCW F F 3 B B CW F B CCW F 1 F 3 B CCW CCW CCW F 1 B CW 3 CW B 2 F CCW CCW F B CW CW B 1 F CCW B 2 F CW CW F F 3 B B CCW CCW 2 B 3 F CW CW F 1 F 3 B B CCW CCW B B B CCW 2 F 3 B CW F F 1 B B CCW F 2 B CW F F B B CCW F CW CW B CCW F 3 B CW F CCW CCW B CW F F B B CCW F CW CW B CCW 1 F 3 F B",
             "count":246
@@ -1072,7 +986,48 @@
          ]
       },
       {
-         "number":28,
+         "number":26,
+         "solution":{
+            "moves":"3 CW B 2 F 3 B CCW F F CCW CCW F 1 B 2 F CCW F 3 B CW 2 B 3 F CCW 1 F F CCW F B 3 F CW CW 1 F 3 B CCW CCW B 1 B CCW 2 F 3 B CW F 2 B CCW 1 F CW CW B CCW F 3 CCW B 2 F CW 1 B 2 F CCW B 1 F 2 CW B 3 F CCW B CCW CCW B B CCW 2 F 3 B CW F 1 F F B B B 3 CCW 1 F 3 B CW F F F 2 B B B 3 CCW F CW CW B CCW 2 F 3 B CW F 1 B 3 CCW 1 F 2 F B 3 B CW 1 F 3 CCW CCW B CW F F CW CW F CW B CW 1 F CCW CCW B CW 2 F 3 B CCW F 2 B CW 1 F 3 B CCW F B CW F 2 F 3 CW CW F CW F 1 B CCW B 3 CCW CCW B 1 F 3 CW CW F CW F 2 B CCW B B 3 CCW B 2 F CW F F CW 3 F B CCW B B CCW B 1 F CW F 3 CCW CCW B 1 B 3 F CW B 2 F CCW B 3 F CW B 1 F 3 CCW B",
+            "count":252
+         },
+         "diagram":[
+            [
+               "#######",
+               "#.....#",
+               "#.x#x.#",
+               "#.x...#",
+               "##x..##",
+               " #####"
+            ],
+            [
+               "#######",
+               "#o o o#",
+               "#  #  #",
+               "#o  o #",
+               "## ^o##",
+               " #####"
+            ],
+            [
+               "#######",
+               "#o o o#",
+               "#  #  #",
+               "#o  o #",
+               "##  o##",
+               " #####"
+            ],
+            [
+               "#######",
+               "#     #",
+               "#  #  #",
+               "#     #",
+               "##   ##",
+               " #####"
+            ]
+         ]
+      },
+      {
+         "number":27,
          "solution":{
             "moves":"2 B 3 CW B 2 F 3 CCW F F B B CW B 1 F 2 F B 3 CCW F F CW CW F 1 B 3 F CCW CCW 2 F CW 3 CW F 2 B 3 F CCW CCW 1 F CW 3 CW B CCW F 1 B CW F 3 CCW CCW 2 F 3 B CW CW B CCW F 2 B CW F 3 CCW F CCW CCW CCW B CW F CW 2 B 3 F CCW B CCW F CW CW CW B CCW 2 F 3 B CW CW B CCW F B CW F CCW CCW F CCW B CCW 2 F 3 B CW F CW B B CW CW B CCW CCW F CCW B CCW 1 F F B B CW 2 F CW B B CW 3 F CW 2 B B CW 1 F 2 B CCW F CW CW 1 B 2 F CCW CCW F 3 B CW CW 2 B 3 F CCW CCW F CCW B CCW F CW CW F CCW F B CCW F 2 F 3 B 1 B CW 3 F CW B CW CW B CCW CCW B 1 F 3 CW CW 1 B 2 F CCW 3 F CCW CCW F CW CW CW 2 B 3 F CCW F CCW CCW CCW 1 F 3 B CW F B CCW F 1 F 2 B 1 B 3 CW CW CW B 2 F 3 CCW CCW CCW F 2 B 3 CW CW B 2 F CCW 3 CCW F B CW CW B 1 F CCW 3 CCW 1 B CW 2 F 3 B CCW F 2 B CCW B CW 3 F CCW 1 F 3 B CW B CCW F CW CW 1 F 2 B CCW 3 F B",
             "count":316
@@ -1113,7 +1068,7 @@
          ]
       },
       {
-         "number":29,
+         "number":28,
          "solution":{
             "moves":"3 F CCW B 2 F 3 B CCW 2 B 3 F CW F CW B 2 F 3 CCW 2 B 3 F CW B 1 F CW 3 CW 1 B 3 F CCW CCW F 2 F 3 B B CW CW 2 B 3 F CCW CCW F 1 F F B B B CW 3 CW B CW B 2 F 3 CCW F CCW CCW F F F 2 B B B CW 3 CW B CW B 1 F 3 CCW F CCW CCW F 1 B 3 CCW B CCW B 2 F 3 CW F CW F 2 B 3 CCW B CCW B 1 F 3 CW CW 1 B 2 F CCW F 3 B CW 2 B 3 F CCW 1 F CW 3 CW 1 B CCW 3 F CW F CW F B CW CW B 2 F 3 B CW 2 B 3 F CCW 1 F 3 B CW B CCW 2 F CW 3 F B CCW B 1 F CW CW B 3 F CCW CCW F CW CW F 2 B CCW 3 CCW B 2 F CW CW 3 F B CCW CCW B 1 F CW CW 2 B CCW F 1 B 3 F CCW B 2 F 3 B CCW CCW F 1 B CW CW 3 F CW B CW F F CCW CCW F CW CW B CCW F CCW B B CCW CCW 2 B CW CW F CW B CW F F 3 B B CCW F CCW B B CCW CCW B CW CW F CW B CW F 1 F 3 B B CCW F CCW B CCW CCW 1 B 2 F CW CW F CW B 1 F 3 CCW B CCW CCW B CW 1 B 2 F CCW 1 F 2 B CW B 3 F CCW F CW CW 1 F 3 B CCW CCW B 1 B 3 F CW B 2 F CCW B 3 F CW B 1 F 3 CCW B",
             "count":350
@@ -1146,6 +1101,51 @@
                "#      #",
                "##oo  ##",
                " ######"
+            ]
+         ]
+      },
+      {
+         "number":29,
+         "solution":{
+            "moves":"2 CW F F F CCW 1 F F 3 F CW 2 B 3 CCW CCW B 1 F 3 F B B CW B 2 B B CW B 1 F 2 B 1 B B 2 F F 3 B B CCW F F CW CW F CCW 1 CW B 2 F 3 CCW CCW 2 F 3 B CW CW 2 B 3 CCW CCW B 1 F 2 B 3 CW CW B 1 B 3 CCW F F F CCW CCW F F CCW B CCW 1 CW 2 F CW B CW 1 CCW F B 2 CW 3 CW 2 F 3 B CCW CCW F CCW 2 B CCW F 3 B CW F B CCW 1 F CW 3 CCW F B B CW F CW B 1 CW CW B 3 F CCW CCW 1 F 2 B CW CW 3 B B CW F 1 B 3 CCW F 1 F CCW CCW F B 3 CW CW 1 F 2 B CCW CCW F B 3 F CCW B CCW F F CW 1 CW F B CCW F F F 3 B B B CCW B CW CW B 1 F CCW CCW B CW 2 F 3 B CCW F 2 B CW 1 F F 2 CW 3 CW F CW F 1 B CCW B 3 CCW 2 CCW 1 B 3 CW B 2 F CCW F F 1 B B 3 CW B 1 F CCW B CCW 2 F 3 B CW F CW B CW CW 2 B 3 F CCW CCW F CCW B 1 F F 3 F 2 B B B CCW 1 F 3 B CW F F 1 B B CCW F 3 F CW CW F CCW CCW B CW F F 2 B B CCW F F 3 B B CW F 1 B CCW F F 3 B 1 B CW F 3 F CW CW F CW F B B CW 1 F 2 B CCW F 1 B CW F 3 F CCW CCW F CW CW 1 B CCW 3 F CCW B CCW CCW B 2 F 3 B 2 B CCW F B CW F 1 F 2 B B CCW 3 F B CW F F 2 F 3 CW CW F F 1 B 3 F CW B 1 F 2 CCW B 3 F CW B CW 1 F 2 B CCW F 3 CCW B CCW CCW 1 F 2 B CW CW 1 B B 3 CCW B 2 F CW F F B B CCW B 1 F CW F 3 F B",
+            "count":454
+         },
+         "diagram":[
+            [
+               "######",
+               "#....##",
+               "#...xx#",
+               "#.##..#",
+               "#...xx#",
+               "#..#..#",
+               "#######"
+            ],
+            [
+               "######",
+               "#>  o##",
+               "#  oo #",
+               "# ##  #",
+               "#  o o#",
+               "#o #oo#",
+               "#######"
+            ],
+            [
+               "######",
+               "#   o##",
+               "#  o  #",
+               "# ##  #",
+               "#    o#",
+               "#  # o#",
+               "#######"
+            ],
+            [
+               "######",
+               "#    ##",
+               "#     #",
+               "# ##  #",
+               "#     #",
+               "#  #  #",
+               "#######"
             ]
          ]
       },
