@@ -56,7 +56,7 @@ export const settings = new class Settings {
 
   _loadLevelPack() {
     const storage = window.localStorage;
-    this._levelPack = storage.getItem("level_pack") || "builtin";
+    this._levelPack = storage.getItem("level_pack") || "original";
   }
 
   _saveLevelPack() {
