@@ -20,7 +20,7 @@ export class WarehouseAspect extends Aspect {
   _createMesh() {
     this._mesh = this._screen.assets.createMesh("warehouse");
     const meshes = this._mesh.getChildMeshes(true);
-    this._warehouseMesh = meshes[2];
+    this._warehouseMesh = meshes[0];
     this._fanMesh = meshes[3];
     this._initMaterials();
     this._initAnimations();

@@ -4,30 +4,45 @@ export class SpaceAspect extends Aspect {
   constructor(screen_) {
     super(screen_);
     this._createMesh();
+    this._initCallbacks();
+    this._initEvents();
+  }
+
+  dispose() {
+    this._disposeEvents();
+    super.dispose();
   }
 
   _createMesh() {
     this._mesh = this._screen.assets.createMesh("space");
-    this._initAnimations();
+    this._initAnimation();
   }
 
-  _initAnimations() {
-    this._mesh.animations = [];
-    this._mesh.animations.push(this._createSpaceAnimation());
-    this._screen.scene.beginAnimation(this._mesh, 0, 1200, true);
+  _initAnimation() {
+    const texture = this._mesh.material.emissiveTexture;
+    texture.uOffset = Number.EPSILON; // WORKAROUND: zero does not work
+    texture.vOffset = Number.EPSILON; // WORKAROUND: zero does not work
+    const angle = Math.random() * Math.PI * 2;
+    this._stepU = Math.sin(angle) / 200000;
+    this._stepV = Math.cos(angle) / 200000;
   }
-  
-  _createSpaceAnimation() {
-    const y = -Math.PI + Math.random() * Math.PI * 2;
-    const from = new BABYLON.Vector3(0, y, 0);
-    const to = new BABYLON.Vector3(Math.PI * 2, y, 0);
-    const keys = [];
-    keys.push({ frame: 0, value: from });
-    keys.push({ frame: 1200, value: to });
-    const anim = new BABYLON.Animation("rotate", "rotation", 1,
-      BABYLON.Animation.ANIMATIONTYPE_VECTOR3,
-      BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
-    anim.setKeys(keys);
-    return anim;
+
+  _initCallbacks() {
+    this._scene_onBeforeRenderCallback = this._scene_onBeforeRender.bind(this);
+  }
+
+  _initEvents() {
+    this._screen.scene.registerBeforeRender(this._scene_onBeforeRenderCallback);
+  }
+
+  _disposeEvents() {
+    this._screen.scene.unregisterBeforeRender(this._scene_onBeforeRenderCallback);
+  }
+
+  _scene_onBeforeRender() {
+    const timeDelta = this._screen.scene.getEngine().getDeltaTime();
+    const texture = this._mesh.material.emissiveTexture;
+    texture.uOffset += timeDelta * this._stepU;
+    texture.vOffset += timeDelta * this._stepV;
   }
 }
