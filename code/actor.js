@@ -94,8 +94,8 @@ export class Actor extends Figure  {
 
   _scene_onBeforeRender() {
     this._carries.clear();
-    const timeDelta_ = this._screen.scene.getEngine().getDeltaTime();
+    const timeDelta = this._screen.scene.getEngine().getDeltaTime();
     for (const anim of [...this._animations]) // loop on a copy
-      anim.update(timeDelta_);
+      anim.update(timeDelta);
   }
 }
