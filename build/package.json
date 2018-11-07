@@ -12,7 +12,7 @@
     "cpy": "^7.0.1",
     "del": "^3.0.0",
     "glob-promise": "^3.4.0",
-    "gltf-import-export": "^1.0.12",
+    "gltf-import-export": "^1.0.14",
     "imagemin": "^6.0.0",
     "imagemin-pngquant": "^6.0.0",
     "replace-in-file": "^3.4.2",
