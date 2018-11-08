@@ -59,27 +59,27 @@ export class HelpUI extends UI {
     const panel = new BABYLON.GUI.StackPanel("main_panel");
     panel.width = "592px";
     panel.height = "592px";
-    panel.addControl(this._createRulesPanel());
+    panel.addControl(this._createInstructionsPanel());
     panel.addControl(this._createControlsPanel());
     panel.addControl(this._createShortcutsPanel());
     return panel;
   }
 
-  _createRulesPanel() {
-    const panel = new BABYLON.GUI.StackPanel("rules_panel");
-    panel.addControl(this._createRulesTitleLabel());
-    panel.addControl(this._createRulesBodyLabel());
+  _createInstructionsPanel() {
+    const panel = new BABYLON.GUI.StackPanel("instructions_panel");
+    panel.addControl(this._createInstructionsTitleLabel());
+    panel.addControl(this._createInstructionsBodyLabel());
     return panel;
   }
 
-  _createRulesTitleLabel() {
-    const label = this._createTitleLabel("rules_title_label");
-    label.text = "Rules";
+  _createInstructionsTitleLabel() {
+    const label = this._createTitleLabel("instructions_title_label");
+    label.text = "Instructions";
     return label;
   }
 
-  _createRulesBodyLabel() {
-    const label = this._createBodyLabel("rules_body_label");
+  _createInstructionsBodyLabel() {
+    const label = this._createBodyLabel("instructions_body_label");
     label.height = "80px";
     label.text = "Stack crates on goals and" + "\n" +
       "leave no empty goals";
