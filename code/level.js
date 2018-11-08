@@ -112,9 +112,7 @@ export class Level {
   }
 
   _disposeGrid() {
-    if (this._grid) {
-      this._grid.dispose();
-      this._grid = null;
-    }
+    this._grid.dispose();
+    this._grid = null;
   }
 }

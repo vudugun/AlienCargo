@@ -106,9 +106,9 @@ export class ForkliftActor extends Actor {
   }
 
   _rotateTractor(angleLeft_, angleRight_, frames_) {
-    const Right = BABYLON.Vector3.Right();
-    const stepLeft = BABYLON.Quaternion.RotationAxis(Right, angleLeft_);
-    const stepRight = BABYLON.Quaternion.RotationAxis(Right, angleRight_);
+    const right = BABYLON.Vector3.Right();
+    const stepLeft = BABYLON.Quaternion.RotationAxis(right, angleLeft_);
+    const stepRight = BABYLON.Quaternion.RotationAxis(right, angleRight_);
     this._rotateBy(this._tractorLeftMesh, stepLeft, frames_, {
       group: "secondary" });
     this._rotateBy(this._tractorRightMesh, stepRight, frames_, {
