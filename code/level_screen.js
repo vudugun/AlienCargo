@@ -274,7 +274,7 @@ export class LevelScreen extends Screen {
 
   _createCamera() {
     const pos1 = new BABYLON.Vector3(0, 3, 0);
-    this._camera1 = new BABYLON.ArcRotateCamera("camera1", -Math.PI / 2,
+    this._camera1 = new BABYLON.ArcRotateCamera("camera1", -(Math.PI / 2),
       Math.PI / 9, 10, pos1, this._scene);
   }
 

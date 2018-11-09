@@ -7,7 +7,7 @@ export class UI {
   }
 
   set isEnabled(flag_) {
-    this._ui.executeOnAllControls(c => c.isEnabled = flag_);
+    this._ui.executeOnAllControls(c => { c.isEnabled = flag_; });
   }
 
   set isVisible(flag_) {
@@ -19,7 +19,7 @@ export class UI {
   }
 
   set alpha(alpha_) {
-    this._ui.executeOnAllControls(c => c.alpha = alpha_);
+    this._ui.executeOnAllControls(c => { c.alpha = alpha_; });
   }
 
   fadeIn(duration_, onFinished_ = () => {}) {

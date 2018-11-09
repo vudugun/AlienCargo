@@ -163,7 +163,7 @@ export class MainScreen extends Screen {
 
   _createCamera() {
     const pos1 = new BABYLON.Vector3(0, 3, 0);
-    this._camera1 = new BABYLON.ArcRotateCamera("camera1", -Math.PI / 2,
+    this._camera1 = new BABYLON.ArcRotateCamera("camera1", -(Math.PI / 2),
       Math.PI / 9, 10, pos1, this._scene);
   }
 
@@ -322,7 +322,7 @@ export class MainScreen extends Screen {
   }
 
   _levelScreen_onAbort() {
-    this._levelScreen.abort(() => { this.run() });
+    this._levelScreen.abort(() => { this.run(); });
   }
 
   _levelScreen_onRestart() {
@@ -342,7 +342,7 @@ export class MainScreen extends Screen {
       const map = this._maps.get(this._levelPack, this._nextLevelNo);
       this._levelScreen.runNext(new Level(map));
     } else {
-      this._levelScreen.handleGameSolved(() => { this.run(1000) });
+      this._levelScreen.handleGameSolved(() => { this.run(1000); });
     }
   }
 }

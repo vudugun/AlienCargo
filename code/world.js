@@ -31,7 +31,7 @@ export class World {
   }
 
   _initCallbacks() {
-    this._window_onResizeCallback = () => { this._engine.resize() };
+    this._window_onResizeCallback = () => { this._engine.resize(); };
   }
 
   _initEvents() {

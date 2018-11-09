@@ -94,15 +94,15 @@ export class ForkliftActor extends Actor {
   }
 
   _moveForklift(step_, frames_, onFinished_) {
-    this._updateRoot(); 
+    this._updateRoot();
     this._moveBy(this._mesh, step_, frames_, {
-      group: "primary",
+      group: "forklift",
       onFinished: onFinished_
     });
   }
 
   _rotateForklift(step_, frames_) {
-    this._rotateBy(this._mesh, step_, frames_, { group: "primary" }); 
+    this._rotateBy(this._mesh, step_, frames_, { group: "forklift" });
   }
 
   _rotateTractor(angleLeft_, angleRight_, frames_) {
@@ -110,13 +110,13 @@ export class ForkliftActor extends Actor {
     const stepLeft = BABYLON.Quaternion.RotationAxis(right, angleLeft_);
     const stepRight = BABYLON.Quaternion.RotationAxis(right, angleRight_);
     this._rotateBy(this._tractorLeftMesh, stepLeft, frames_, {
-      group: "secondary" });
+      group: "tractor_left" });
     this._rotateBy(this._tractorRightMesh, stepRight, frames_, {
-      group: "secondary" });
+      group: "tractor_right" });
   }
 
   _moveForks(step_, frames_) {
-    this._moveBy(this._forksMesh, step_, frames_, { group: "primary" });
+    this._moveBy(this._forksMesh, step_, frames_, { group: "forklift" });
   }
 
   _entity_onMoveForward(payloadIn_) {
@@ -150,7 +150,7 @@ export class ForkliftActor extends Actor {
     const step = BABYLON.Quaternion.CW(axis);
     const frames = 8 - $settings.getOption("rotation_speed");
     this._rotateForklift(step, frames);
-    this._rotateTractor(Math.PI * 0.5, -Math.PI * 0.5, frames);
+    this._rotateTractor(Math.PI / 2, -(Math.PI / 2), frames);
   }
 
   _entity_onRotateCCW() {
@@ -159,7 +159,7 @@ export class ForkliftActor extends Actor {
     const step = BABYLON.Quaternion.CCW(axis);
     const frames = 8 - $settings.getOption("rotation_speed");
     this._rotateForklift(step, frames);
-    this._rotateTractor(-Math.PI * 0.5, Math.PI * 0.5, frames);
+    this._rotateTractor(-(Math.PI / 2), Math.PI / 2, frames);
   }
 
   _entity_onForksMove(from_, to_) {

@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
     override();
     $settings.load();
     world = new World();
-    world.initAsync().then(() => world.run());
+    world.initAsync().then(() => { world.run(); });
   });
 
 window.addEventListener("unload", () => {

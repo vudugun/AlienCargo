@@ -31,7 +31,7 @@ export class WarehouseAspect extends Aspect {
     this._albedoTexture = this._createAlbedoTexture();
     matWarehouse.albedoTexture = this._albedoTexture;
   }
-  
+
   _createAlbedoTexture() {
     const { width, height } = this._baseImage;
     const texture = new BABYLON.DynamicTexture(
@@ -53,7 +53,7 @@ export class WarehouseAspect extends Aspect {
 
   _createFanAnimation() {
     const from = BABYLON.Vector3.Zero();
-    const to = new BABYLON.Vector3(0, -Math.PI * 2, 0);
+    const to = new BABYLON.Vector3(0, -(Math.PI * 2), 0);
     const keys = [];
     keys.push({ frame: 0, value: from });
     keys.push({ frame: 6, value: to });
