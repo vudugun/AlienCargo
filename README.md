@@ -3,7 +3,7 @@
 ![Level 13](https://github.com/vudugun/AlienCargo/blob/master/screenshots/level_13.png)
 
 ## Description
-Alien Cargo is a WebGL 3D game inspired by the classical puzzle game "Sokoban". The game has 30 levels of increasing difficulty and is fully playable.
+Alien Cargo is a WebGL 3D game inspired by the classic puzzle game *Sokoban*. The game has 30 levels of increasing difficulty and is fully playable.
 
 You can play the game [here](https://vudugun.github.io/AlienCargo/).
 
