@@ -951,32 +951,32 @@
       {
          "number":25,
          "solution":{
-            "moves":"3 CW B CCW F 2 F 3 CCW CCW F 1 B 2 F CCW F 3 B CW 2 B 3 F CCW 1 F F CCW F B 2 F CW CW F CW B CW F 1 B CCW F 2 CCW B 1 F 2 B CCW CCW 3 B 1 B CCW 2 F 3 B CW F 2 B CCW 1 F CW CW B CCW F F 2 B 1 B 3 F CCW B 2 F CW B 3 F CCW B 1 F 2 B CCW CCW 1 F B B B 3 CCW 2 F 3 B CW F F F 2 B B B 3 CCW 1 F 3 CW CW 1 B 3 CCW 2 F 3 B CW F 2 B 3 CCW 1 F 2 F B B 3 CW 2 F 3 B CCW F F B B CW 1 F 3 CCW CCW B CW F F CW CW F CW B CW 1 F CCW CCW B CW 2 F 3 B CCW F 2 B CW 1 F 3 B CCW F B CW F F CW CW F CW F 1 B CCW B 3 CCW CCW B 2 F CW 3 CW F CW F 2 B CCW B 3 CCW CCW B 1 F 3 CW CW F CW F B CCW B B CCW B 1 F CW F 3 CCW CCW B 1 B 3 F CW B 2 F CCW B 3 F CW B 1 F 3 CCW B",
-            "count":265
+            "moves":"CW 2 F CW 1 B 2 F CCW B 1 F 2 F CW CW F 1 B 2 CCW CCW B CW B 1 F CCW 2 F CW CW F B CCW CCW B 1 F CW CW 3 F CW B CW F CCW CCW 1 B CW F F F B B B CCW F 2 B CW F F F B B B CCW F CW CW B CCW F F 3 B B CW F CCW CCW B CW F 1 B CCW F CW CW B CCW F 3 CCW B 2 F CW B CW F CCW CCW B CW F B CCW F CW CW B CCW F CCW B 1 F CW 3 B CW F CCW CCW B CW F B CCW F CW CW B CCW F 1 F 3 CCW CCW F 1 CCW B CCW 2 F 3 B CW F 2 B CCW 1 F CW CW B CCW 2 F 3 B CW F 2 B CCW 1 F F B B CW 2 F 3 B CCW F F 2 B B CW 1 F CCW CCW B CW 2 F 3 B CCW F 2 B CW 1 F CW 2 B 1 B 3 F CW CW 2 F 3 B CCW CCW 2 B 3 F CW CW 1 F 3 B CCW CCW B CW B CW CW B 2 F 3 CCW CCW F CCW 1 B 3 F CW B CW CW B 1 F 3 CCW CCW F CCW B CCW F B CW F CW B 2 F CCW B 3 F CW B 1 F 3 CCW B",
+            "count":285
          },
          "diagram":[
             [
                "#######",
-               "#.....#",
-               "#.x#x.#",
-               "#.x...#",
-               "##x..##",
+               "#x.x..#",
+               "#..#..#",
+               "#..xx.#",
+               "##...##",
                " #####"
             ],
             [
                "#######",
-               "#ooo  #",
-               "#  #  #",
-               "#o  o #",
-               "## ^o##",
+               "# o o #",
+               "# o#o #",
+               "#oo   #",
+               "##o <##",
                " #####"
             ],
             [
                "#######",
-               "#ooo  #",
-               "#  #  #",
-               "#o  o #",
-               "##  o##",
+               "#     #",
+               "# o#o #",
+               "#oo   #",
+               "##o  ##",
                " #####"
             ],
             [
