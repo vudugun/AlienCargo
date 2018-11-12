@@ -21,7 +21,7 @@ export class Forks extends Entity {
       return;
     const from = this._height;
     this._height = height_;
-    this._updateLocation();
+    this.updateLocation();
     this.onMove.notify(from, this._height);
   }
 
@@ -29,8 +29,8 @@ export class Forks extends Entity {
     return this.payload instanceof Crate ? 1 : 0;
   }
 
-  onForkliftLocationChanged() {
-    this._updateLocation();
+  updateLocation() {
+    this.location = this._computeLocation(this.height);
   }
 
   _initEvents() {
@@ -49,10 +49,6 @@ export class Forks extends Entity {
         return false;
     }
     return true;
-  }
-
-  _updateLocation() {
-    this.location = this._computeLocation(this.height);
   }
 
   _computeLocation(height_) {

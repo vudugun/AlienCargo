@@ -25,7 +25,7 @@ export class Forklift extends Entity {
 
   set location(location_) {
     super.location = location_;
-    this._forks.onForkliftLocationChanged();
+    this._forks.updateLocation();
   }
 
   get orientation() {
@@ -34,7 +34,7 @@ export class Forklift extends Entity {
 
   set orientation(orientation_) {
     this._orientation = orientation_;
-    this._forks.onForkliftLocationChanged();
+    this._forks.updateLocation();
   }
 
   move(action_) {
