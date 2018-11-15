@@ -31,7 +31,7 @@ export class LevelScreen extends Screen {
     this._assets = new Assets(this._scene);
     this._ui = new LevelUI(this);
     this._uiLevelSolved = new LevelSolvedUI(this);
-    this._keyboard = new Keyboard();
+    this._keyboard = new Keyboard(this._scene);
     this._level = null;
     this._figures = [];
     this._forklift = null;

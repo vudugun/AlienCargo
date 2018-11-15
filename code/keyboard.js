@@ -1,20 +1,18 @@
 export class Keyboard {
-  constructor() {
+  constructor(scene_) {
+    this._scene = scene_;
     this._keysDown = new Set();
     this._actions = null;
-    this._keyDownListener = this._window_onKeyDown.bind(this);
-    this._keyUpListener = this._window_onKeyUp.bind(this);
+    this._onKeyboardCallback = this._scene_onKeyboard.bind(this);
   }
 
   track(actions_) {
     this._actions = actions_;
-    window.addEventListener("keydown", this._keyDownListener);
-    window.addEventListener("keyup", this._keyUpListener);
+    this._scene.onKeyboardObservable.add(this._onKeyboardCallback);
   }
 
   untrack() {
-    window.removeEventListener("keyup", this._keyUpListener);
-    window.removeEventListener("keydown", this._keyDownListener);
+    this._scene.onKeyboardObservable.removeCallback(this._onKeyboardCallback);
     this._actions = null;
     this._keysDown.clear();
   }
@@ -24,19 +22,19 @@ export class Keyboard {
       this._actions.get(key)();
   }
 
-  _window_onKeyDown(event_) {
-    const key = event_.keyCode;
-    if (!this._actions.has(key))
-      return;
-    event_.preventDefault();
-    if (this._keysDown.has(key))
-      return;
-    this._keysDown.add(key);
-    this._actions.get(key)();
-  }
-
-  _window_onKeyUp(event_) {
-    const key = event_.keyCode;
-    this._keysDown.delete(key);
+  _scene_onKeyboard(info_) {
+    if (info_.type === BABYLON.KeyboardEventTypes.KEYDOWN) {
+      const key = info_.event.keyCode;
+      if (!this._actions.has(key))
+        return;
+      info_.event.preventDefault();
+      if (this._keysDown.has(key))
+        return;
+      this._keysDown.add(key);
+      this._actions.get(key)();
+    } else if (info_.type === BABYLON.KeyboardEventTypes.KEYUP) {
+      const key = info_.event.keyCode;
+      this._keysDown.delete(key);
+    }
   }
 }
