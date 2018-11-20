@@ -20,15 +20,15 @@ export class WarehouseAspect extends Aspect {
   _createMesh() {
     this._mesh = this._screen.assets.createMesh("warehouse");
     const meshes = this._mesh.getChildMeshes(true);
-    this._warehouseMesh = meshes[0];
+    this._warehouseMesh = meshes[2];
     this._fanMesh = meshes[3];
     this._initMaterials();
     this._initAnimations();
   }
 
   _initMaterials() {
-    const matWarehouse = this._warehouseMesh.material;
     this._albedoTexture = this._createAlbedoTexture();
+    const matWarehouse = this._warehouseMesh.material;
     matWarehouse.albedoTexture = this._albedoTexture;
   }
 
@@ -73,11 +73,12 @@ export class WarehouseAspect extends Aspect {
     // digits
     const digit1 = Math.floor(number_ / 10 % 10);
     const digit2 = number_ % 10;
-    this._drawDigit(ctx, digit1, 600, 624);
-    this._drawDigit(ctx, digit2, 160, 624);
+    this._drawDigit(ctx, digit1, 1200, 624);
+    this._drawDigit(ctx, digit2, 320, 624);
     // scrapes
     ctx.globalCompositeOperation = "destination-out";
     ctx.drawImage(this._scrapesMask, 0, -height + 1);
+    ctx.drawImage(this._scrapesMask, 1024, -height + 1);
     // base
     ctx.globalCompositeOperation = "multiply";
     ctx.drawImage(this._baseImage, 0, -height + 1);
@@ -91,6 +92,6 @@ export class WarehouseAspect extends Aspect {
     const h = 256;
     const sx = (digit_ % 4) * w;
     const sy = Math.floor(digit_ / 4) * h;
-    ctx_.drawImage(this._digits, sx, sy, w, h, tx_, -ty_, w, h);
+    ctx_.drawImage(this._digits, sx, sy, w, h, tx_, -ty_, w * 2, h);
   }
 }
