@@ -18,7 +18,7 @@
     "replace-in-file": "^3.4.2",
     "rollup": "^0.66.6",
     "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-babel-minify": "^6.1.1",
+    "rollup-plugin-babel-minify": "^6.2.0",
     "rollup-plugin-re": "^1.0.7"
   }
 }
