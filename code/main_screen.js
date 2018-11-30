@@ -134,7 +134,7 @@ export class MainScreen extends Screen {
   }
 
   _createScene() {
-    this._scene.ambientColor.set(0.8, 0.8, 0.8);
+    this._scene.ambientColor.set(0.9, 0.9, 0.9);
     this._createSpace();
     this._createWarehouse();
     this._createLights();

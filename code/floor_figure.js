@@ -21,6 +21,6 @@ export class FloorFigure extends Figure {
   }
 
   _initMaterials() {
-    this._mesh.material.ambientColor.set(0.1, 0.1, 0.1);
+    this._mesh.material.ambientColor.set(0.15, 0.15, 0.15);
   }
 }

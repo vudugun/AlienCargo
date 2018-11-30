@@ -31,7 +31,7 @@ export class GoalFigure extends Figure {
   _initMaterials() {
     const matGoal = this._mesh.material;
     matGoal.albedoTexture = this._createAlbedoTexture();
-    matGoal.ambientColor.set(0.1, 0.1, 0.1);
+    matGoal.ambientColor.set(0.15, 0.15, 0.15);
   }
 
   _createAlbedoTexture() {

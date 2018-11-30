@@ -29,6 +29,7 @@ export class WarehouseAspect extends Aspect {
   _initMaterials() {
     this._albedoTexture = this._createAlbedoTexture();
     const matWarehouse = this._warehouseMesh.material;
+    matWarehouse.ambientColor.set(0.05, 0.05, 0.05);
     matWarehouse.albedoTexture = this._albedoTexture;
   }
 
