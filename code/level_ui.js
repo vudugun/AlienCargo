@@ -118,7 +118,7 @@ export class LevelUI extends UI {
     button.paddingLeft = "8px";
     button.paddingRight = "8px";
     button.color = "#000000";
-    button.background = "#536c79";
+    button.background = "#7092A3";
     button.cornerRadius = 10;
     return button;
   }

@@ -164,7 +164,7 @@ export class HelpUI extends UI {
     const label = new BABYLON.GUI.TextBlock(name_);
     label.height = "96px";
     label.fontFamily = "Native Alien Extended";
-    label.color = "#536c79";
+    label.color = "#7092A3";
     label.fontSize = 48;
     return label;
   }
@@ -183,7 +183,7 @@ export class HelpUI extends UI {
     button.fontSize = 18;
     button.height = "40px"
     button.color = "#000000";
-    button.background = "#536c79";
+    button.background = "#7092A3";
     button.cornerRadius = 10;
     return button;
   }

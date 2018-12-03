@@ -249,7 +249,7 @@ export class OptionsUI extends UI {
     const label = new BABYLON.GUI.TextBlock(name_);
     label.height = "96px";
     label.fontFamily = "Native Alien Extended";
-    label.color = "#536c79";
+    label.color = "#7092A3";
     label.fontSize = 48;
     return label;
   }
@@ -272,7 +272,7 @@ export class OptionsUI extends UI {
     slider.height = "32px";
     slider.isThumbCircle = true;
     slider.borderColor = "#000000";
-    slider.background = "#536c79";
+    slider.background = "#7092A3";
     slider.color = "#c0c000";
     slider.onValueChangedObservable.add(value_ => {
       slider.value = Math.round(value_);
@@ -290,7 +290,7 @@ export class OptionsUI extends UI {
     slider.height = "32px";
     slider.isThumbCircle = true;
     slider.borderColor = "#000000";
-    slider.background = "#536c79";
+    slider.background = "#7092A3";
     slider.color = slider.background;
     slider.onValueChangedObservable.add(value_ => {
       slider.value = Math.round(value_);
@@ -309,7 +309,7 @@ export class OptionsUI extends UI {
     button.fontSize = 18;
     button.height = "40px"
     button.color = "#000000";
-    button.background = "#536c79";
+    button.background = "#7092A3";
     button.cornerRadius = 10;
     return button;
   }

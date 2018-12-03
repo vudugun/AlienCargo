@@ -124,7 +124,7 @@ export class MainUI extends UI {
     button.paddingLeft = "16px";
     button.paddingRight = "16px";
     button.color = "#000000";
-    button.background = "#536c79";
+    button.background = "#7092A3";
     button.cornerRadius = 10;
     return button;
   }
@@ -181,7 +181,7 @@ export class MainUI extends UI {
     slider.height = "32px";
     slider.isThumbCircle = true;
     slider.borderColor = "#000000";
-    slider.background = "#536c79";
+    slider.background = "#7092A3";
     slider.color = "#c0c000";
     slider.onValueChangedObservable.add(value => {
       slider.value = Math.round(value);
