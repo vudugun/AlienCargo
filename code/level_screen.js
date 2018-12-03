@@ -259,17 +259,17 @@ export class LevelScreen extends Screen {
 
   _createLights() {
     // light1
-    const pos1 = new BABYLON.Vector3(0, 12, 0);
+    const pos1 = new BABYLON.Vector3(0, 14, 0);
     this._light1 = new BABYLON.PointLight("light1", pos1, this._scene);
-    this._light1.intensity = 500;
-    this._light1.shadowMinZ = 6;
-    this._light1.shadowMaxZ = 12;
+    this._light1.intensity = 750;
+    this._light1.shadowMinZ = 8;
+    this._light1.shadowMaxZ = 14;
   }
 
   _createShadowGenerator() {
     this._shadowGenerator = new BABYLON.ShadowGenerator(1024, this._light1);
     this._shadowGenerator.usePercentageCloserFiltering = true;
-    this._shadowGenerator.setDarkness(0.9);
+    this._shadowGenerator.setDarkness(0.85);
   }
 
   _createCamera() {
