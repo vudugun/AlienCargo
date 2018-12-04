@@ -157,7 +157,7 @@ export class MainScreen extends Screen {
     const pos1 = new BABYLON.Vector3(0, 14, 0);
     this._light1 = new BABYLON.PointLight("light1", pos1, this._scene);
     this._light1.intensity = 750;
-    this._light1.shadowMinZ = 8;
+    this._light1.shadowMinZ = 9;
     this._light1.shadowMaxZ = 14;
   }
 
