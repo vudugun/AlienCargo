@@ -113,7 +113,7 @@ export class CrateFigure extends Figure {
     const keys = [];
     if (this._isOnGoal) {
       keys.push({ frame: 0, value: this._mesh.material.emissiveColor });
-      keys.push({ frame: 10, value: new BABYLON.Color3(0.13, 0.13, 0.0) });
+      keys.push({ frame: 10, value: new BABYLON.Color3(0.18, 0.14, 0.0) });
     } else {
       keys.push({ frame: 0, value: this._mesh.material.emissiveColor });
       keys.push({ frame: 5, value: new BABYLON.Color3(0.0, 0.0, 0.0) });
