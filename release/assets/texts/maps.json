@@ -508,41 +508,41 @@
       {
          "number":14,
          "solution":{
-            "moves":"CCW 3 CCW B CW 2 F 3 B CCW F 1 B CW F CCW CCW 2 B CW F 1 B CCW F CW CW 3 F CCW F 2 B CCW F CW CW F 3 CCW F B CW B 1 F 2 B 1 B 2 F CCW F 3 B CW 2 B 3 F CCW 1 F 3 B CW B CCW 1 F CW CW B CCW 3 F CW F 1 B 3 F CW CW CW 2 F 3 B CCW CCW CCW 2 B 3 F CW CW CW 1 F 3 B CCW CCW CCW B CCW B CW 1 F 3 B CCW F B",
-            "count":118
+            "moves":"F 3 F CW CW CW B CCW B 2 F CW F 1 B 2 CCW B 1 F CW 2 F B CCW F 3 B CW F B CCW 1 F CW CW F B B CCW 2 F 3 CW F F 2 B B 3 CCW B 1 F 3 CW F CW CW 1 B 2 F CCW CCW F CW CW F B 3 F CW B CW F CCW F CCW F B CCW CCW B 1 F 3 CW CW CW B CW B 1 F 2 B 1 B 2 F CCW F 3 B CW 2 B 3 F CCW 1 F 3 B CW B",
+            "count":117
          },
          "diagram":[
             [
-               " ####",
-               "##..#",
-               "#x.x#",
-               "#..x#",
+               "#####",
+               "#.x.#",
                "#...#",
-               "#####"
+               "#x.x#",
+               "#..##",
+               "####"
             ],
             [
-               " ####",
-               "##oo#",
-               "#  o#",
-               "#o  #",
-               "# > #",
-               "#####"
+               "#####",
+               "#ovo#",
+               "#o o#",
+               "#   #",
+               "# o##",
+               "####"
             ],
             [
-               " ####",
-               "##oo#",
-               "#  o#",
-               "#o  #",
+               "#####",
+               "#o o#",
+               "#o o#",
                "#   #",
-               "#####"
+               "#  ##",
+               "####"
             ],
             [
-               " ####",
-               "## o#",
+               "#####",
                "#   #",
                "#   #",
                "#   #",
-               "#####"
+               "#  ##",
+               "####"
             ]
          ]
       },
@@ -586,47 +586,6 @@
       {
          "number":16,
          "solution":{
-            "moves":"3 F CW B 2 F CCW B 3 F CW B 1 F F B 3 CCW B CW 2 F CCW F 1 B 2 CW B 1 F 2 CCW F B CCW F 3 B CW F B CCW 1 F CW 3 F CCW B CCW CCW 2 B B 3 CCW B 2 F 3 CW F F B B CCW B 1 F 3 CW F CW CW 1 B 3 F CW B 2 F CCW B 3 F CW B 1 F 3 CCW CCW 1 B 3 F CCW F CW CW F B CCW CCW B 2 F 3 B CW 2 B 3 F CCW 1 F 3 B CW B",
-            "count":123
-         },
-         "diagram":[
-            [
-               "#####",
-               "#.x.#",
-               "#x..#",
-               "#..x#",
-               "#..##",
-               "####"
-            ],
-            [
-               "#####",
-               "#o o#",
-               "#> o#",
-               "# o #",
-               "#o ##",
-               "####"
-            ],
-            [
-               "#####",
-               "#o o#",
-               "#   #",
-               "# o #",
-               "#o ##",
-               "####"
-            ],
-            [
-               "#####",
-               "#   #",
-               "#   #",
-               "#   #",
-               "#  ##",
-               "####"
-            ]
-         ]
-      },
-      {
-         "number":17,
-         "solution":{
             "moves":"F CW F CW CW B 3 CW B 2 F 3 B CCW F 1 B CW F CCW CCW B 2 F CW 1 F 2 B CCW B CW F F 3 B B CCW F B CW F 1 F CCW CCW B 3 CCW B 2 F 3 CW F 2 B 3 CCW B 1 F 3 CW F B CCW B CW F CW B CW CW B 2 F 3 B CCW 1 B 2 F CW 1 F 2 B CCW B 3 F CW F CCW CCW 1 F 3 B CW CW B 1 B 3 F CCW B 2 F CW B 3 F CCW B 1 F 3 CW B",
             "count":123
          },
@@ -662,6 +621,47 @@
                "#    #",
                "##   #",
                " #####"
+            ]
+         ]
+      },
+      {
+         "number":17,
+         "solution":{
+            "moves":"F CCW 2 F 3 B CCW 1 B CW 3 F CCW F CW B CCW 2 B CW F 3 B CCW F B CW 1 F 2 CCW CCW 1 B 2 F CW CW F 3 B CCW CCW 2 B 3 F CW CW 1 F 2 B CCW F CW CW 1 B 2 F CCW B 1 F 2 CW B 3 F CCW 2 F CW 1 B CW 3 F CCW F B CW B CCW F CCW B 1 F 2 CW B CW F 3 B CCW F B CW 1 F CCW CCW B CW 2 F 3 B CCW F 2 B CW 1 F 3 B CCW F B",
+            "count":123
+         },
+         "diagram":[
+            [
+               " ####",
+               "##..#",
+               "#x.x#",
+               "#..x#",
+               "#...#",
+               "#####"
+            ],
+            [
+               " ####",
+               "##oo#",
+               "# oo#",
+               "#   #",
+               "#>  #",
+               "#####"
+            ],
+            [
+               " ####",
+               "##oo#",
+               "# oo#",
+               "#   #",
+               "#   #",
+               "#####"
+            ],
+            [
+               " ####",
+               "##  #",
+               "#  o#",
+               "#   #",
+               "#   #",
+               "#####"
             ]
          ]
       },
