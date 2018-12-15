@@ -508,41 +508,41 @@
       {
          "number":14,
          "solution":{
-            "moves":"CCW 2 CCW B CW F 3 B CCW F 1 B CW F 2 B CCW F B CW F F 3 B CCW CCW 1 B 3 F CW CW 1 F 3 B CCW CCW 2 B 3 F CW 1 F 3 CW CW 1 B 3 F CCW B 2 F CW B 3 F CCW B 1 F 3 F CW 1 B 3 F CCW B 2 F CW B CW F 3 CCW F B CW B CCW F CCW B 1 F 3 CW B CW 1 F CCW CCW B CW 2 F 3 B CCW F 2 B CW 1 F 3 B CCW F B",
+            "moves":"2 CCW B 1 F CW F 2 CCW CCW F 1 B 2 F CCW B CCW 1 F CW CW B B 3 CW B 2 F 3 B CCW F F 1 B B CW F 2 B CCW F CW CW 1 B 2 F CCW F 3 B CW 2 B 3 F CCW 1 F 3 B CW B CCW CCW B 1 F 2 CW CW 1 B 2 CCW B 1 F CW 2 F B 3 F CCW CCW 1 F CCW 3 B CCW F CW CW B 1 B 3 F CCW B 2 F CW B 3 F CCW B 1 F 3 CW B",
             "count":117
          },
          "diagram":[
             [
-               " ####",
-               "##..#",
-               "#x.x#",
-               "#..x#",
-               "#...#",
-               "#####"
+               "   ####",
+               " ###..#",
+               "##.x..#",
+               "#....x#",
+               "#..####",
+               "####"
             ],
             [
-               " ####",
-               "##oo#",
-               "# oo#",
-               "#o  #",
-               "# > #",
-               "#####"
+               "   ####",
+               " ###oo#",
+               "##o o #",
+               "# >   #",
+               "#  ####",
+               "####"
             ],
             [
-               " ####",
-               "##oo#",
-               "# oo#",
-               "#   #",
-               "#   #",
-               "#####"
+               "   ####",
+               " ###oo#",
+               "##    #",
+               "#     #",
+               "#  ####",
+               "####"
             ],
             [
-               " ####",
-               "##  #",
-               "#   #",
-               "#   #",
-               "#   #",
-               "#####"
+               "   ####",
+               " ###  #",
+               "##    #",
+               "#     #",
+               "#  ####",
+               "####"
             ]
          ]
       },
