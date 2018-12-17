@@ -23,8 +23,8 @@ export class SpaceAspect extends Aspect {
     texture.uOffset = Number.EPSILON; // WORKAROUND: zero does not work
     texture.vOffset = Number.EPSILON; // WORKAROUND: zero does not work
     const angle = Math.random() * Math.PI * 2;
-    this._stepU = Math.sin(angle) / 200000;
-    this._stepV = Math.cos(angle) / 200000;
+    this._stepU = Math.cos(angle) / 200000;
+    this._stepV = Math.sin(angle) / 200000;
   }
 
   _initCallbacks() {
