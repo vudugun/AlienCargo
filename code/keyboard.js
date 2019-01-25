@@ -3,16 +3,16 @@ export class Keyboard {
     this._scene = scene_;
     this._keysDown = new Set();
     this._actions = null;
-    this._onKeyboardCallback = this._scene_onKeyboard.bind(this);
+    this._initCallbacks();
   }
 
   track(actions_) {
     this._actions = actions_;
-    this._scene.onKeyboardObservable.add(this._onKeyboardCallback);
+    this._scene.onKeyboardObservable.add(this._scene_onKeyboardCallback);
   }
 
   untrack() {
-    this._scene.onKeyboardObservable.removeCallback(this._onKeyboardCallback);
+    this._scene.onKeyboardObservable.removeCallback(this._scene_onKeyboardCallback);
     this._actions = null;
     this._keysDown.clear();
   }
@@ -20,6 +20,10 @@ export class Keyboard {
   performActions() {
     for (const key of this._keysDown)
       this._actions.get(key)();
+  }
+
+  _initCallbacks() {
+    this._scene_onKeyboardCallback = this._scene_onKeyboard.bind(this);
   }
 
   _scene_onKeyboard(info_) {
